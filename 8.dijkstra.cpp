@@ -7,9 +7,9 @@ using namespace std;
 #define S second
 typedef long long ll;
 typedef pair<ll, ll> pll;
-typedef vector<pll> vll;
+typedef vector<pll> vll; 
 const ll infLL = 9000000000000000000;
-
+                                                      //T.C : O( E + V*log2(n) )
 const int mx = 1e5 + 123;
 vector<pair<int, int>> adj[mx];
 ll dist[mx];
