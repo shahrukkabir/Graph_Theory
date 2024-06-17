@@ -1,10 +1,14 @@
 /* 
         Input: Take input adjacency matrix
-        Node:3 ,The edges are 1-2 (cost 5), 2-3 (cost 8), 1-3 (cost 3),All edges are bidirectional
-        ** adjMat[i][j] means there is a edge between i and j node.
-        0 5 3
-        5 0 8
-        3 8 0  
+        Node:3, The edges are 1-2 (cost 5), 2-3 (cost 8), 1-3 (cost 3),All edges are bidirectional
+
+            1 2 3
+         1  0 5 3
+         2  5 0 8
+         3  3 8 0  
+
+        adjMat[i][j] means there is a edge between i and j node.
+
 */
 
 #include<bits/stdc++.h>
