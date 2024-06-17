@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int mx = 1e5+123;
-vector<int> adj[mx];
+vector<int> adj[mx];   //array of vector
 
 int main()
 {
