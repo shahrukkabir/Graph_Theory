@@ -17,16 +17,10 @@ bool isBicolor (int s){
     while(!q.empty()){
         int u = q.front();
         q.pop();
-        int curCol;
-        if(col[u]==1){
-            curCol=2;
-        }
-        else{
-            curCol=1;
-        }
         for( auto v: adj[u] ){
             if(col[v]==-1){
-                col[v]=curCol;
+                if(col[u]==1) col[v]=2;
+                else col[v]=1;
                 q.push(v);
             }
             else if(col[v]==col[u]){  //pasapasi adjacent node er color same

@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int mx = 1e5+123;
-vector<pair<int, int>> adj[mx];
+vector<pair<int, int>> adj[mx];  //array of vectors of pairs
 
 int main()
 {
@@ -28,23 +28,14 @@ int main()
     return 0;
 }
 
-Adjacent nodes of node 1 : 
-Node : 2 Weight : 10
-Node : 2 Weight : 13
-Node : 2 Weight : 14
+/* 
 
 
-Adjacent nodes of node 2 : 
-Node : 1 Weight : 10
-Node : 1 Weight : 13
-Node : 1 Weight : 14
-Node : 3 Weight : 2
-Node : 4 Weight : 3
+adj[1]=[{2,10},{2,13},{2,14}]
+adj[2]=[{1,10},{1,13},{1,14},{3,2},{4,3}]
+adj[3]=[{2,2}]
+adj[4]=[{2,3}]
 
 
-Adjacent nodes of node 3 : 
-Node : 2 Weight : 2
 
-
-Adjacent nodes of node 4 : 
-Node : 2 Weight : 3
+*/

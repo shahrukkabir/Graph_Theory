@@ -1,3 +1,5 @@
+//https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/practice-problems/algorithm/monk-and-the-islands/
+
 #include <bits/stdc++.h>
 using namespace std;
 #define FAST ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
@@ -5,8 +7,8 @@ using namespace std;
 typedef long long ll;
 
 const int mx = 1e4+123;
-vector<int> adj[mx];
-int lev[mx];
+vector<int> adj[mx];       
+int lev[mx];                            //single source shortest path
 
 void bfs(int s) {
     memset(lev, -1, sizeof(lev));
@@ -14,7 +16,7 @@ void bfs(int s) {
     queue<int> q;
     q.push(s);
     while (!q.empty()) {
-        int u = q.front();
+        int u = q.front();              //T.C :O(V+E)
         q.pop();
         cout << u << " ";
         for (auto v : adj[u]) {

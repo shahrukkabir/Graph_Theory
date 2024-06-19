@@ -19,7 +19,7 @@ void dfs( int u ){
     }
 
 }
-
+ 
 int main()
 {
     FAST
@@ -61,13 +61,14 @@ int main()
 
 /* 
 
+//dfs in grid
+
 bool vis[mx][mx];
 int dx[]={-1,+1,0,0}; 
 int dy[]={0,0,-1,+1};
 
 void dfs( int x , int y ){
     vis[x][y]=1;
-    cnt++;
     for(int i=0;i<4;i++){
         int x1=x+dx[i];
         int y1=y+dy[i];

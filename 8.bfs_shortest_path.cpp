@@ -15,7 +15,7 @@ void bfs(int s) {
     memset(par, -1, sizeof(par));
     queue<int> q;
     q.push(s);
-    lev[s] = 0;
+    lev[s] = 0;                          //single source  shortest path using bfs 
     while (!q.empty()) {
         int u = q.front();
         q.pop();
@@ -34,7 +34,7 @@ int main() {
 
     int n, e; 
     cin >> n >> e;
-    for (int i = 0; i < e; ++i) {
+    for (int i = 0; i < e; i++) {
         int u, v; 
         cin >> u >> v;
         adj[u].push_back(v);
@@ -51,7 +51,7 @@ int main() {
     
     par[s] = -1;
 
-    vector<int> path;
+    vector<int> path; 
 
     while( t!=-1 ){
         path.push_back(t);
