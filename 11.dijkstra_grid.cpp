@@ -1,4 +1,5 @@
 /* 
+
 Explanation: The grid is-
 9 4 9 9
 6 7 6 4
@@ -12,7 +13,6 @@ Explanation: The grid is-
 3 7
 The minimum cost is- 4 + 3 + 7 = 14 
 
-*/
 
 int dx[] = { 0, 0, +1, -1, -1  +1, -1, +1 };
 int dy[] = { +1, -1, 0, 0, -1, +1, +1, -1 };
@@ -61,3 +61,4 @@ int shortest(vector<vector<int> > &grid, int n)
 }
 
 
+*/

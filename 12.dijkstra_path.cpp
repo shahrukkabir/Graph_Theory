@@ -64,8 +64,8 @@ const           int             mx   =  1e5+123;
 //int dx[]={-1,+1,0,0}; 
 //int dy[]={0,0,-1,+1};
 
-ll dist[mx];
 vector<pair<int,int>> adj[mx];
+ll dist[mx];
 ll par[mx];
 
 void dijkstra(int s, int n) {

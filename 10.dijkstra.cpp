@@ -7,9 +7,9 @@ using namespace std;
 #define S second
 typedef long long ll;
 typedef pair<ll, ll> pll;
-typedef vector<pll> vll; 
+typedef vector<pll> vpl; 
 const ll infLL = 9000000000000000000;
-                                                      //T.C : O( E + V*log2(n) )
+                                                      //T.C : O((V+E)logV)
 const int mx = 1e5 + 123;
 vector<pair<int, int>> adj[mx];                       //adj[0]= [{2,3},{1,5},{5,2}]  ->adj list of node 0
 ll dist[mx];
@@ -20,7 +20,7 @@ void dijkstra(int s, int n) {
     }
     dist[s] = 0;                                      // initializing source distance   
 
-    priority_queue<pll, vll, greater<pll>> pq;        // sort small to big
+    priority_queue<pll, vpl, greater<pll>> pq;        // sort small to big
     pq.push({0, s});                                  // {dist, node}
     while (!pq.empty()) {
         int u = pq.top().S;                           // u -> node
@@ -80,39 +80,39 @@ int main() {
 
 //Copy
 
-// #define F first
-// #define S second
-// typedef long long ll;
-// typedef pair<ll, ll> pll;
-// typedef vector<pll> vll; 
-// const ll infLL = 9000000000000000000;
+#define F first
+#define S second
+typedef long long ll;
+typedef pair<ll, ll> pll;
+typedef vector<pll> vll; 
+const ll infLL = 9000000000000000000;
                                                      
-// const int mx = 1e5 + 123;
-// vector<pair<int, int>> adj[mx];                       
-// ll dist[mx];
+const int mx = 1e5 + 123;
+vector<pair<int, int>> adj[mx];                       
+ll dist[mx];
 
-// void dijkstra(int s, int n) {
-//     for (int i = 0; i <= n; i++) {
-//         dist[i] = infLL;                             
-//     }
-//     dist[s] = 0;                                
+void dijkstra(int s, int n) {
+    for (int i = 0; i <= n; i++) {
+        dist[i] = infLL;                             
+    }
+    dist[s] = 0;                                
 
-//     priority_queue<pll, vll, greater<pll>> pq;    
-//     pq.push({0, s});                                
-//     while (!pq.empty()) {
-//         int u = pq.top().S;                           
-//         ll currD = pq.top().F;                    
-//         pq.pop();
-//         if (dist[u] < currD) {                      
-//             continue;                                
-//         }
-//         for (auto p : adj[u]) {                     
-//             int v = p.F;                              
-//             ll  w = p.S;                              
-//             if (currD + w < dist[v]) {                
-//                 dist[v] = currD + w;                  
-//                 pq.push({dist[v], v});
-//             } 
-//         }
-//     }
-// }
+    priority_queue<pll, vll, greater<pll>> pq;    
+    pq.push({0, s});                                
+    while (!pq.empty()) {
+        int u = pq.top().S;                           
+        ll currD = pq.top().F;                    
+        pq.pop();
+        if (dist[u] < currD) {                      
+            continue;                                
+        }
+        for (auto p : adj[u]) {                     
+            int v = p.F;                              
+            ll  w = p.S;                              
+            if (currD + w < dist[v]) {                
+                dist[v] = currD + w;                  
+                pq.push({dist[v], v});
+            } 
+        }
+    }
+}

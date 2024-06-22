@@ -59,7 +59,7 @@ int main()
 }
 
 
-/* 
+
 
 //dfs in grid
 
@@ -78,4 +78,4 @@ void dfs( int x , int y ){
     }    
 }  
 
-*/
+
