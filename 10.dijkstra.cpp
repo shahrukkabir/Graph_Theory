@@ -6,33 +6,33 @@ using namespace std;
 #define F first
 #define S second
 typedef long long ll;
+typedef pair<ll, ll> pii;
 typedef pair<ll, ll> pll;
 typedef vector<pll> vpl; 
-const ll infLL = 9000000000000000000;
                                                       //T.C : O((V+E)logV)
 const int mx = 1e5 + 123;
-vector<pair<int, int>> adj[mx];                       //adj[0]= [{2,3},{1,5},{5,2}]  ->adj list of node 0
+vector<pll> adj[mx];              //adj[0]= [{2,3},{1,5},{5,2}]  ->adj list of node 0      //vector<vll>adj[mx]; 
 ll dist[mx];
 
 void dijkstra(int s, int n) {
     for (int i = 0; i <= n; i++) {
-        dist[i] = infLL;                              //initialization
+        dist[i] = LLONG_MAX;                          //initialization
     }
     dist[s] = 0;                                      // initializing source distance   
 
-    priority_queue<pll, vpl, greater<pll>> pq;        // sort small to big
+    priority_queue<pll, vpl, greater<pll>> pq;        // sort small to big     //   priority_queue<vll,vector<vll>,greater<vll>>pq;
     pq.push({0, s});                                  // {dist, node}
     while (!pq.empty()) {
-        int u = pq.top().S;                           // u -> node
         ll currD = pq.top().F;                        // currD -> dist
+        int u = pq.top().S;                           // u -> node
         pq.pop();
-        if (dist[u] < currD) {                        // dis[u] -> previous distance
+        if (currD > dist[u]) {                        // dis[u] -> previous distance
             continue;                                 // Skip if this node has been processed with a shorter distance
         }
         for (auto p : adj[u]) {                       // p -> {node, cost}
             int v = p.F;                              // v -> node 
             ll  w = p.S;                              // w -> cost
-            if (currD + w < dist[v]) {                // currD + w -> go to node v
+            if (dist[v]>currD+w) {                // currD + w -> go to node v
                 dist[v] = currD + w;                  // relaxation
                 pq.push({dist[v], v});
             } 
@@ -83,35 +83,34 @@ int main() {
 #define F first
 #define S second
 typedef long long ll;
+typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
-typedef vector<pll> vll; 
-const ll infLL = 9000000000000000000;
+typedef vector<pll> vpl; 
                                                      
-const int mx = 1e5 + 123;
-vector<pair<int, int>> adj[mx];                       
+const int mx=1e5+123;
+vector<pll>adj[mx];                       
 ll dist[mx];
 
-void dijkstra(int s, int n) {
-    for (int i = 0; i <= n; i++) {
-        dist[i] = infLL;                             
+void dijkstra(int s,int n) {
+    for (ll i=0;i<=n;i++) {
+        dist[i]=LLONG_MAX;                             
     }
-    dist[s] = 0;                                
-
-    priority_queue<pll, vll, greater<pll>> pq;    
-    pq.push({0, s});                                
+    dist[s]=0;                                
+    priority_queue<pll, vpl, greater<pll>> pq;    
+    pq.push({0,s});                                
     while (!pq.empty()) {
-        int u = pq.top().S;                           
-        ll currD = pq.top().F;                    
+        ll currD=pq.top().F;                    
+        ll u=pq.top().S;                           
         pq.pop();
-        if (dist[u] < currD) {                      
+        if (currD>dist[u]) {                      
             continue;                                
         }
-        for (auto p : adj[u]) {                     
-            int v = p.F;                              
-            ll  w = p.S;                              
-            if (currD + w < dist[v]) {                
-                dist[v] = currD + w;                  
-                pq.push({dist[v], v});
+        for (auto p:adj[u]) {                     
+            ll v=p.F;                              
+            ll w=p.S;                              
+            if (dist[v]>currD+w) {                
+                dist[v]=currD+w;                  
+                pq.push({dist[v],v});
             } 
         }
     }
