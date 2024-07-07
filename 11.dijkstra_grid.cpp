@@ -1,4 +1,3 @@
-/* 
 
 Explanation: The grid is-
 9 4 9 9
@@ -60,5 +59,3 @@ int shortest(vector<vector<int> > &grid, int n)
 
 }
 
-
-*/

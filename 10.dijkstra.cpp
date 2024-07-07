@@ -11,7 +11,7 @@ typedef pair<ll, ll> pll;
 typedef vector<pll> vpl; 
                                                       //T.C : O((V+E)logV)
 const int mx = 1e5 + 123;
-vector<pll> adj[mx];              //adj[0]= [{2,3},{1,5},{5,2}]  ->adj list of node 0      //vector<vll>adj[mx]; 
+vector<pll> adj[mx];         //vector<vll>adj[mx];    //adj[0]= [{2,3},{1,5},{5,2}]  ->adj list of node 0      
 ll dist[mx];
 
 void dijkstra(int s, int n) {
@@ -32,7 +32,7 @@ void dijkstra(int s, int n) {
         for (auto p : adj[u]) {                       // p -> {node, cost}
             int v = p.F;                              // v -> node 
             ll  w = p.S;                              // w -> cost
-            if (dist[v]>currD+w) {                // currD + w -> go to node v
+            if (dist[v]>currD+w) {                    // currD + w -> go to node v
                 dist[v] = currD + w;                  // relaxation
                 pq.push({dist[v], v});
             } 
