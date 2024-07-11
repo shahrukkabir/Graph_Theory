@@ -31,7 +31,6 @@ bool isBicolor (int s){
     return 1;
 }
 
-
 int main() {
     FAST
     

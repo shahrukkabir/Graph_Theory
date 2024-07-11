@@ -1,4 +1,4 @@
-//https://lightoj.com/problem/back-to-underworld
+//1.https://lightoj.com/problem/back-to-underworld
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -7,8 +7,8 @@ using namespace std;
 #define nl '\n'
 typedef long long ll;
 
-//প্রশ্নে অনেকগুলো bipartite ( ২ টা কালারে কালার করা যাবে ) গ্রাফ দেওয়া আছে, এখন প্রত্যেকটি গ্রাফে সর্বোচ্চ
-//কালার(২ টি কালারের মধ্যে যে কালারটি বেশি) যেটি তাদের যোগফল বাহির করতে হবে।
+//প্রশ্নে অনেকগুলো bipartite ( ২ টা কালারে কালার করা যাবে ) গ্রাফ দেওয়া আছে, এখন 
+//প্রত্যেকটি গ্রাফে সর্বোচ্চ কালার(২ টি কালারের মধ্যে যে কালারটি বেশি) যেটি তাদের যোগফল বাহির করতে হবে।
 
 const int mx = 2e4+123;
 bool vis[mx];
@@ -66,7 +66,7 @@ int main() {
 }
 
 
-//https://lightoj.com/problem/guilty-prince
+//2.https://lightoj.com/problem/guilty-prince
 
 //প্রশ্নে ' . ' হচ্ছে  মাটি এবং ' # ' হচ্ছে পানি যেখানে যেতে পারবে না,  এখন কেউ ' @ ' থেকে শুরু করে সর্বোচ্চ 
 //কতগুলো নোডে ভিজিট করতে পারবে / ' @ ' সংলগ্ন maximum size of connected component বাহির করতে হবে।
