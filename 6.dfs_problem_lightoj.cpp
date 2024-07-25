@@ -71,7 +71,6 @@ int main() {
 //প্রশ্নে ' . ' হচ্ছে  মাটি এবং ' # ' হচ্ছে পানি যেখানে যেতে পারবে না,  এখন কেউ ' @ ' থেকে শুরু করে সর্বোচ্চ 
 //কতগুলো নোডে ভিজিট করতে পারবে / ' @ ' সংলগ্ন maximum size of connected component বাহির করতে হবে।
 
-
 #include <bits/stdc++.h>
 using namespace std;
 

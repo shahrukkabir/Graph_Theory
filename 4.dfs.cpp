@@ -1,8 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define FAST ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
-#define nl '\n'
-typedef long long ll;
 
 const int mx = 123;
 bool vis[mx];
@@ -22,7 +19,6 @@ void dfs( int u ){
  
 int main()
 {
-    FAST
 
     adj[1].push_back(2);
     adj[2].push_back(1);
@@ -48,9 +44,9 @@ int main()
         for(auto u : adj[i]){
             cout<<u<<" ";
         }
-        cout<<nl;
+        cout<<endl;
     }
-    cout<<nl<<nl;
+    cout<<endl<<endl;
     cout<<"DFS PATH :  ";
     dfs(1);
 
@@ -72,7 +68,7 @@ void dfs( int x , int y ){
     for(int i=0;i<4;i++){
         int x1=x+dx[i];
         int y1=y+dy[i];
-        if(x1>=1 && x1<=n && y1>=1 && y1<=m  && vis[x1][y1]==0){
+        if(x1>=0 && x1<n && y1>=0 && y1<m  && vis[x1][y1]==0){
             dfs(x1,y1);
         }
     }    
