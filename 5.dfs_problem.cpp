@@ -153,9 +153,7 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
  
-#define FAST ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 #define nl '\n'
-typedef long long ll;
  
 const int mx = 1e5+123;
 vector<int>adj[mx];
@@ -172,8 +170,6 @@ void dfs( int u ){
 }
  
 int main() {
-    
-    FAST
     
     int n,m; cin>>n>>m;
     while(m--){

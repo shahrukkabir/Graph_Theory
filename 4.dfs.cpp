@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+ 
 const int mx = 123;
 bool vis[mx];
 vector<int>adj[mx];
@@ -14,7 +14,6 @@ void dfs( int u ){
         }
         
     }
-
 }
  
 int main()
