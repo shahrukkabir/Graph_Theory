@@ -6,7 +6,6 @@ using namespace std;
 #define F first
 #define S second
 typedef long long ll;
-typedef pair<ll, ll> pii;
 typedef pair<ll, ll> pll;
 typedef vector<pll> vpl; 
                                                       //T.C : O((V+E)logV)

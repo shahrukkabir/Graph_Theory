@@ -1,9 +1,10 @@
-/*
+
 Explanation: The grid is-
 9 4 9 9
 6 7 6 4
 8 3 3 7
 7 4 9 10
+
 The minimum cost is-
 9 + 4 + 7 + 3 + 3 + 7 + 10 = 43
 
@@ -59,4 +60,3 @@ int shortest(vector<vector<int> > &grid, int n)
 
 }
 
-*/

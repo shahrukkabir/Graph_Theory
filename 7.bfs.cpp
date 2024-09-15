@@ -21,7 +21,7 @@ void bfs(int s) {
         cout << u << " ";
         for (auto v : adj[u]) {
             if (lev[v] == -1) {         //if unvisited
-                lev[v] = lev[u] + 1;
+                lev[v] = lev[u] + 1;    //increase level by 1 from parent node    
                 q.push(v);
             }
         }
