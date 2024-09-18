@@ -18,7 +18,7 @@ ll par[mx];
 vector<ll> bellmanPath(ll s, ll n, ll m){
 
     vector<ll>path;
-    // for(ll i=1;i<=n;i++) dist[i]=LLONG_MAX;
+    // for(ll i=1;i<=n;i++) dist[i]=LONG_MAX;
     // dist[s]=0;
     ll x = -1;
     for(ll i=1;i<=n;i++){

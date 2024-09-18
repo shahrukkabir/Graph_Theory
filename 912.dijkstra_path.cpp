@@ -69,7 +69,7 @@ ll dist[mx];
 ll par[mx];
 
 void dijkstra(int s, int n) {
-    for (int i = 1; i <= n; i++) dist[i] = LLONG_MAX;
+    for (int i = 1; i <= n; i++) dist[i] = LONG_MAX;
     priority_queue<pll, vpl, greater<pll>> pq;
     dist[s] = 0;
     pq.push({0, s});
@@ -101,7 +101,7 @@ int main() {
     }
 
     dijkstra(1, n);
-    if (dist[n] == LLONG_MAX) {
+    if (dist[n] == LONG_MAX) {
         cout << -1 << nl;
         return 0;
     }

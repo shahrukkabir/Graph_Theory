@@ -15,7 +15,7 @@ ll dist[mx];
 
 void dijkstra(int s, int n) {
     for (int i = 0; i <= n; i++) {
-        dist[i] = LLONG_MAX;                          //initialization
+        dist[i] = LONG_MAX;                           //initialization
     }
     dist[s] = 0;                                      // initializing source distance   
 
@@ -94,7 +94,7 @@ ll dist[mx];
 
 void dijkstra(int s, int n) {
     for (int i = 1; i <= n; i++) {
-        dist[i] = LLONG_MAX;                          // initialize distances
+        dist[i] = LONG_MAX;                           // initialize distances
     }
     dist[s] = 0;                                      // source distance is 0
 

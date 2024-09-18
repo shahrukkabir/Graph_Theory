@@ -19,7 +19,7 @@ void shortest(vector<vector<int>> &grid, int n, int m, vector<vector<ll>> &dist)
     // Initialize the distances with a large number
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= m; j++) {
-            dist[i][j] = LLONG_MAX;
+            dist[i][j] = LONG_MAX;
         }
     }     
     // priority_queue< pair<long long, pair<ll, ll> >, vector<pair<long long, pair<ll, ll>>>, greater<pair<long long, pair<ll, ll> >>> pq; 
@@ -98,13 +98,13 @@ const int mx = 1e3 + 5;
 int dx[] = { 0, 0, +1, -1 };
 int dy[] = { +1, -1, 0, 0 }; 
 
-vector<vector<ll>> dist(mx, vector<ll>(mx, LLONG_MAX)); 
+vector<vector<ll>> dist(mx, vector<ll>(mx, LONG_MAX)); 
 
 void shortest(vector<vector<int>> &grid, int n, int m) {
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            dist[i][j] = LLONG_MAX; 
+            dist[i][j] = LONG_MAX; 
         }
     }
 

@@ -13,7 +13,7 @@ vector<info> e;
 ll dist[mx];
 
 bool bellmanFord(int s, int n, int m) {
-    for (int i = 1; i <= n; i++) dist[i] = LLONG_MAX;
+    for (int i = 1; i <= n; i++) dist[i] = LONG_MAX;
     dist[s] = 0;
     bool isCycle = false;
     for (int i = 1; i <= n; i++) {              // n -1 times ...... if in nth times relax that mean there is a cycle    
@@ -23,7 +23,7 @@ bool bellmanFord(int s, int n, int m) {
             int v = e[j].v;
             int w = e[j].w;
             if (dist[u] + w < dist[v]) {
-                dist[v] = dist[u] + w;        //dist[v] = max(-LLONG_MAX, dist[u] + w);
+                dist[v] = dist[u] + w;        //dist[v] = max(-LONG_MAX, dist[u] + w);
                 isCycle = true;
             }
         }
