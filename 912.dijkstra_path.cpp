@@ -96,7 +96,7 @@ int main() {
     int n, m; cin >> n >> m;
     for (int i = 1; i <= m; i++) {
         int u, v, w; cin >> u >> v >> w;
-        adj[u].pb({v, w});
+        adj[u].pb({v, w});      
         adj[v].pb({u, w});
     }
 
