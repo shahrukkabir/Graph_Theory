@@ -55,12 +55,6 @@ const           double          eps  =  1e-9;
 const           long long       mod  =  1e7+7;
 const           int             mx   =  1e5+123;
 
-//check
-// if(count(v.begin(), v.end(), v[0]) == n) ->if(count(all(s),s[0]==s.size()))
-
-// ll arr[mx];
-// ll preSum[mx];
-
 //int dx[]={-1,+1,0,0}; 
 //int dy[]={0,0,-1,+1};
 

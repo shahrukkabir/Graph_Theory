@@ -3,10 +3,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define FAST ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-#define nl '\n'
-typedef long long ll;
-typedef pair<ll, ll> pll;
+#define    FAST            ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define    nl              '\n'
+#define    F               first
+#define    S               second
+typedef    long long       ll;
+typedef    vector<ll>      vll;
+typedef    pair<ll, ll>    pll;
+typedef    vector<pll>     vpl;                       
+const      int             mx = 1e5+123;
 
 int dx[] = { 0, 0, +1, -1 };  // Right, Left, Down, Up
 int dy[] = { +1, -1, 0, 0 };
@@ -88,12 +93,15 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
-#define FAST ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-#define nl '\n'
-typedef long long ll;
-typedef pair<ll, ll> pll;
-
-const int mx = 1e3 + 5; 
+#define    FAST            ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define    nl              '\n'
+#define    F               first
+#define    S               second
+typedef    long long       ll;
+typedef    vector<ll>      vll;
+typedef    pair<ll, ll>    pll;
+typedef    vector<pll>     vpl;                       
+const      int             mx = 1e5+123;
 
 int dx[] = { 0, 0, +1, -1 };
 int dy[] = { +1, -1, 0, 0 }; 
@@ -114,12 +122,12 @@ void shortest(vector<vector<int>> &grid, int n, int m) {
     pq.push({grid[0][0], {0, 0}}); 
 
     while (!pq.empty()) {
-        pair<int, int> u = pq.top().second;
-        ll curD = pq.top().first;
+        pair<int, int> u = pq.top().S;
+        ll curD = pq.top().F;
         pq.pop();
 
-        int x = u.first;
-        int y = u.second;
+        int x = u.F;
+        int y = u.S;
 
         if (curD > dist[x][y]) continue;
 

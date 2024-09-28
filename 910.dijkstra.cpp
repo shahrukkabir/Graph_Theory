@@ -1,16 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define FAST ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-#define nl '\n'
-#define F first
-#define S second
-typedef long long ll;
-typedef pair<ll, ll> pll;
-typedef vector<pll> vpl; 
-                                                      //T.C : O((V+E)logV
-const int mx = 1e5 + 123;
-vector<pll> adj[mx];         //vector<vll>adj[mx];    //adj[0]= [{2,3},{1,5},{5,2}]  ->adj list of node 0      
+#define    FAST            ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define    nl              '\n'
+#define    F               first
+#define    S               second
+typedef    long long       ll;
+typedef    vector<ll>      vll;
+typedef    pair<ll, ll>    pll;
+typedef    vector<pll>     vpl;                       //T.C : O((V+E)logV
+const      int             mx = 1e5+123;
+
+
+vector<pll> adj[mx];                                  //vector<vll>adj[mx];    //adj[0]= [{2,3},{1,5},{5,2}]  ->adj list of node 0      
 ll dist[mx];
 
 void dijkstra(int s, int n) {
@@ -80,16 +82,18 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
-#define FAST ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
-#define nl '\n'
-#define F first
-#define S second
-typedef long long ll;
-typedef pair<ll, ll> pll;
-typedef vector<pll> vpl; 
-                                                      //T.C : O((V+E)logV
-const int mx = 1e5 + 123;
-vector<pll> adj[mx];         // adjacency list of nodes
+#define    FAST            ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define    nl              '\n'
+#define    F               first
+#define    S               second
+typedef    long long       ll;
+typedef    vector<ll>      vll;
+typedef    pair<ll, ll>    pll;
+typedef    vector<pll>     vpl;                       //T.C : O((V+E)logV
+const      int             mx = 1e5+123;
+
+
+vector<pll> adj[mx];                                  // adjacency list of nodes
 ll dist[mx];
 
 void dijkstra(int s, int n) {
@@ -109,7 +113,7 @@ void dijkstra(int s, int n) {
         }
         for (auto p : adj[u]) {                       // iterate over neighbors of u
             int v = p.F;                              // v -> neighbor node
-            ll w = p.S;                               // w -> weight of the edge
+            ll  w = p.S;                              // w -> weight of the edge
             if (dist[v] > currD + w) {                // relaxation step
                 dist[v] = currD + w;
                 pq.push({dist[v], v});
